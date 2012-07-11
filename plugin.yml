@@ -1,0 +1,19 @@
+name: DoubleXP
+main: com.modcrafting.doublexp.DoubleXP
+version: 0.1
+website: http://modcrafting.com
+author: Deathmarine
+description: >
+            Plugin for Bukkit.
+commands:
+  doublexp:
+    description: Command Access
+    usage: /<command>
+permissions:
+  doublexp.*:
+    description: Allows the Administration to Full Control
+    children:
+      doublexp.use: true
+  doublexp.use:
+    default: op
+    description: Allows sender to enable double xp
