@@ -1,6 +1,6 @@
 name: DoubleXP
 main: com.modcrafting.doublexp.DoubleXP
-version: 0.1
+version: 0.2
 website: http://modcrafting.com
 author: Deathmarine
 description: >
@@ -14,6 +14,10 @@ permissions:
     description: Allows the Administration to Full Control
     children:
       doublexp.use: true
+      doublexp.always: true
   doublexp.use:
     default: op
     description: Allows sender to enable double xp
+  doublexp.always:
+    default: op
+    description: Always gives doublexp

@@ -16,7 +16,9 @@ public class DoubleXP extends JavaPlugin implements Listener{
 	}
 	@EventHandler
 	public void onEntityDeath(EntityDeathEvent event){
-		if(!(event.getEntity() instanceof Player) && toggleon){
+		if(event.getEntity().getKiller().hasPermission("doublexp.always")){
+			event.setDroppedExp(event.getDroppedExp()*2);
+		}else if(!(event.getEntity() instanceof Player) && toggleon){
 			event.setDroppedExp(event.getDroppedExp()*2);
 		}
 	}
